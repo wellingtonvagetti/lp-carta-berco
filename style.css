@@ -18,10 +18,10 @@ header {
     background: #005CA9;
 }
 
-/* CONTAINER */
+/* CONTAINER PRINCIPAL */
 .container {
     width: 1216px;
-    margin: -160px auto 0 auto; /* sobe metade do header */
+    margin: -160px auto 0 auto; /* sobe metade da altura do header */
     background: #FFFFFF;
     padding: 40px;
     display: flex;
@@ -40,11 +40,11 @@ header {
 /* Título */
 .container h1 {
     font-size: 24px;
-    color: #0066B3;
+    color: #000000 !important; /* Preto fixo */
     font-weight: bold;
 }
 
-/* Texto */
+/* Texto secundário */
 .container p {
     font-size: 16px;
     color: #695C56;
@@ -53,23 +53,20 @@ header {
 /* Botões */
 .buttons {
     display: flex;
-    gap: 20px; /* controla espaço entre os botões */
-}
-
-.buttons a {
-    display: inline-block;
-    text-decoration: none;
+    gap: 20px;
 }
 
 .buttons img {
     width: 200px;
     cursor: pointer;
-    transition: 0.2s;
-    display: block; /* evita caracteres invisíveis abaixo da imagem */
+    transition: all 0.15s ease-in-out;
+    display: block;
 }
 
+/* Removendo scale para evitar distorção */
 .buttons img:hover {
-    transform: scale(1.03);
+    filter: brightness(1.08);
+    transform: translateY(-2px);
 }
 
 /* Rodapé */
@@ -77,6 +74,14 @@ footer {
     margin-top: 60px;
     padding: 20px;
     font-size: 14px;
-    color: #695C56;
 }
 
+footer a {
+    color: #695C56;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
